@@ -1,0 +1,242 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
+  background-color: rgba(52, 52, 52, 0.694);
+}
+
+
+
+@media screen and (min-width: 380px) {
+  .heroBanner {
+    padding: 3rem;
+    height: 95vh;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+   
+  
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/* coming-soon.module.css */
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary) 100%);
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #ffffff, #f0f0f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  max-width: 42rem;
+  margin: 0 auto 3rem;
+  color: var(--ifm-color-gray-100);
+  animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 4rem;
+  animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+
+.timerUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.timerDot {
+  font-size: 3rem;
+  color: var(--ifm-color-gray-100);
+  margin: 0 1rem;
+}
+
+.number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--ifm-color-white);
+}
+
+.label {
+  font-size: 1rem;
+  color: var(--ifm-color-gray-300);
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+  animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+.featureCard {
+  padding: 2rem;
+  border-radius: var(--ifm-card-border-radius);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.featureList li {
+  margin: 0.5rem 0;
+  color: var(--ifm-color-gray-200);
+}
+
+.featureList li::before {
+  content: "→";
+  margin-right: 0.5rem;
+  color: var(--ifm-color-primary-light);
+}
+
+.subscribeForm {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.emailInput {
+  padding: 0.5rem 1rem;
+  border-radius: var(--ifm-button-border-radius);
+  border: 1px solid var(--ifm-color-gray-700);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--ifm-color-white);
+  flex: 1;
+}
+
+.subscribeButton {
+  padding: 0.5rem 1rem;
+  border-radius: var(--ifm-button-border-radius);
+  background: var(--ifm-color-primary-light);
+  color: var(--ifm-color-white);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.subscribeButton:hover {
+  background: var(--ifm-color-primary-lighter);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  animation: fadeInUp 1s ease-out 0.8s backwards;
+}
+
+.socialLink {
+  color: var(--ifm-color-gray-100);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: var(--ifm-color-primary-light);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .timerDot {
+    display: none;
+  }
+
+  .subscribeForm {
+    flex-direction: column;
+  }
+}
